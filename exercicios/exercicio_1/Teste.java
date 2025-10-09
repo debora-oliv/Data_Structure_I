@@ -17,7 +17,7 @@ public class Teste {
             var salario = input.nextDouble();
 
             Funcionario f = new Funcionario(salario, nome);
-            Funcionario.addFuncionario(f);
+            System.out.println(f + "\n");
         }
 
         System.out.print("ID do funcionário que receberá o aumento: ");
@@ -27,5 +27,9 @@ public class Teste {
         var aumento = input.nextDouble();
 
         Funcionario.efetuarAumento(id, aumento);
+
+        System.out.print('\n');
+        System.out.println("Lista de funcionários:");
+        Funcionario.listarFuncionarios();
     }
 }

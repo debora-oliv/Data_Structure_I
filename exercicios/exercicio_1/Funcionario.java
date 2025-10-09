@@ -12,7 +12,7 @@ public class Funcionario {
 
     private String nome;
 
-    private static ArrayList<Funcionario> funcionarios;
+    private static final ArrayList<Funcionario> funcionarios = new ArrayList<>();
 
     public Funcionario(Double salario, String nome) {
         id = ++nextId;
@@ -23,30 +23,29 @@ public class Funcionario {
             this.salario = salario;
         else throw new IllegalArgumentException("Salário inválido");
 
-        this.funcionarios = new ArrayList<>();
+        funcionarios.add(this);
     }
 
-    public static void addFuncionario(Funcionario funcionario) {
-        if (!funcionarios.contains(funcionario))
-            funcionarios.add(funcionario);
-        else throw new RuntimeException("Funcionário já foi adicionado");
+    public static void listarFuncionarios() {
+        for (Funcionario f : funcionarios) {
+            System.out.println(f);
+        }
     }
 
     public static void efetuarAumento(Integer id, Double porcentagem) {
         for (Funcionario funcionario : funcionarios) {
-            if (funcionario.id == id) {
-                funcionario.salario += funcionario.salario * (porcentagem / 100);
+            if (funcionario.getId() == id) {
+                funcionario.salario += funcionario.getSalario() * (porcentagem / 100);
                 System.out.println("Aumento efetuado com sucesso!");
+                return;
             }
-            else throw new IllegalArgumentException("Esse id não existe ");
         }
+        throw new IllegalArgumentException("Esse ID não existe");
     }
 
     @Override
     public String toString() {
-        return  "Id: " + id +
-                "\nNome: " + nome +
-                "\nSalário: " + salario;
+        return id + ", " + nome + ", " + salario;
     }
 
     public int getId() {
@@ -63,9 +62,5 @@ public class Funcionario {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public static String getFuncionarios() {
-        return funcionarios.toString();
     }
 }
