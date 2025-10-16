@@ -13,7 +13,30 @@ public class Program {
 
         System.out.println(list);
 
-        list.addAtEnd(50);
+        list.addAtEnd(150);
+
+        System.out.println(list);
+
+        list.addAtIndex(50, 2);
+
+        System.out.println(list);
+
+        System.out.println(list.existValue(150));
+        System.out.println(list.getIndex(21));
+
+        System.out.println(list.getElementByIndex(8));
+
+        System.out.println(list);
+
+        System.out.println(list.removeAtStart());
+
+        System.out.println(list);
+
+        System.out.println(list.removeAtEnd());
+
+        System.out.println(list);
+
+        System.out.println(list.removeAtIndex(0));
 
         System.out.println(list);
     }
