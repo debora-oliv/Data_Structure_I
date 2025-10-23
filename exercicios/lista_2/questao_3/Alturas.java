@@ -26,8 +26,7 @@ public class Alturas {
             System.out.print("Altura: ");
             Double altura = input.nextDouble();
 
-            Pessoa pessoa = new Pessoa(nome, idade, altura);
-            pessoas.add(pessoa);
+            pessoas.add(new Pessoa(nome, idade, altura));
         }
 
         System.out.println("Altura média: " + calcularMediaAltura(pessoas));
@@ -37,7 +36,7 @@ public class Alturas {
     public static Double calcularMediaAltura(List<Pessoa> pessoas) {
         double media = 0.0;
         for (var pessoa : pessoas) {
-            media += pessoa.altura;
+            media += pessoa.getAltura();
         }
         return media / pessoas.size();
     }
@@ -46,9 +45,9 @@ public class Alturas {
         double menores = 0;
         String s = "";
         for (var pessoa : pessoas) {
-            if (pessoa.idade < 16) {
+            if (pessoa.getIdade() < 16) {
                 menores++;
-                s += pessoa.nome + "\n";
+                s += pessoa.getNome() + "\n";
             }
         }
         return (menores * 100) / pessoas.size() + "%" + '\n' + s;
