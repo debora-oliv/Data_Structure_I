@@ -1,7 +1,5 @@
 package exercicio_1;
 
-import java.util.ArrayList;
-
 public class Funcionario {
 
     private static int nextId = 0;
@@ -12,8 +10,6 @@ public class Funcionario {
 
     private String nome;
 
-    private static final ArrayList<Funcionario> funcionarios = new ArrayList<>();
-
     public Funcionario(Double salario, String nome) {
         id = ++nextId;
 
@@ -21,26 +17,7 @@ public class Funcionario {
 
         if (salario >= 1500 && salario < 12000)
             this.salario = salario;
-        else throw new IllegalArgumentException("Salário inválido");
-
-        funcionarios.add(this);
-    }
-
-    public static void listarFuncionarios() {
-        for (Funcionario f : funcionarios) {
-            System.out.println(f);
-        }
-    }
-
-    public static void efetuarAumento(Integer id, Double porcentagem) {
-        for (Funcionario funcionario : funcionarios) {
-            if (funcionario.getId() == id) {
-                funcionario.salario += funcionario.getSalario() * (porcentagem / 100);
-                System.out.println("Aumento efetuado com sucesso!");
-                return;
-            }
-        }
-        throw new IllegalArgumentException("Esse ID não existe");
+        else throw new IllegalArgumentException("Salário deve estar entre 1500 e 12000");
     }
 
     @Override
@@ -54,6 +31,13 @@ public class Funcionario {
 
     public Double getSalario() {
         return salario;
+    }
+
+    public void setSalary(Double salario) {
+        if(salario > 1500 && salario <= 12000)
+            this.salario = salario;
+        else
+            throw new IllegalArgumentException("Salário deve estar entre 1500 e 12000");
     }
 
     public String getNome() {
