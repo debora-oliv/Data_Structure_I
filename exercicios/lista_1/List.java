@@ -45,7 +45,7 @@ public class List<T> {
     }
 
     public void addAtIndex(T value, int index) {
-        if (index < 0 || index > size++) throw new IndexOutOfBoundsException("Index out of bounds");
+        if (index < 0 || index > size) throw new IndexOutOfBoundsException("Index out of bounds");
 
         if (index == 0) {
             addAtStart(value);
@@ -64,19 +64,7 @@ public class List<T> {
         newNode.setNext(aux.getNext());
         aux.setNext(newNode);
         size++;
-        //aux.setNext(new Node<>(value));
     }
-
-//    public Integer getIndex(T value) {
-//        Node<T> aux = head;
-//        for (int index = 0; index < size; index++) {
-//            if (aux.getValue().equals(value)) {
-//                return index;
-//            }
-//            aux = aux.getNext();
-//        }
-//        return -1;
-//    }
 
     public Integer getIndex(T value) {
         if (existValue(value)) {
