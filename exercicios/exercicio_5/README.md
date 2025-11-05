@@ -3,9 +3,9 @@ podemos ter vários itens. Cada item do pedido está relacionado com um produto.
 
 Considerando o domínio descrito, um analista de sistemas realizou as modelagens iniciais de diagramas de classes e objetos que seguem abaixo.
 
-![class diagram](exercicios/exercicio_5/class_diagram.PNG)
+![class diagram](class_diagram.PNG)
 
-![object diagram](exercicios/exercicio_5/object_diagram.PNG)
+![object diagram](object_diagram.PNG)
 
 Pede-se um projeto java com a criação das classes e seus relacionamentos, assim como um programa com metódo main() que faça as instanciações
 mínimas tal que sejam instanciados pelo menos 1 cliente, 1 pedido, 2 itens e 2 produtos. Note que as instanciações podem ser realizadas de acordo
