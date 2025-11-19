@@ -1,4 +1,4 @@
-## Implementação de listas para leitura e precessamento de arquivos
+# Implementação de listas para leitura e precessamento de arquivos
 
 Considere um arquivo texto com os investimentos de várias pessoas. Os dados de investimento são armazenados em uma linha do arquivo: CPF,
 tipo de investimento, taxa (em % ao ano), tempo (em dias) e capital inicial. Considere ainda que não existem linhas em branco no arquivo.

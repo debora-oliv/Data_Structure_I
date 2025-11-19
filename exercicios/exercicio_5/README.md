@@ -1,4 +1,4 @@
-## Exercício Composição
+# Exercício Composição
 
 Foi requisitado um simples sistema de pedidos de compras (orders). Sabe-se que um pedido está relacionado com um cliente e que nesse pedido
 podemos ter vários itens. Cada item do pedido está relacionado com um produto.

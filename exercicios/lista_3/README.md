@@ -1,4 +1,4 @@
-## Pilhas e Filas - Lista de exercícios 2
+# Pilhas e Filas - Lista de exercícios 2
 
 ### QUESTÃO 1 - Problema "validar expressão"
 Dada uma string contendo somente caracteres '(', ')', '{', '}', '[' e ']', determine se a string é

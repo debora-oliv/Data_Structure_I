@@ -1,4 +1,4 @@
-## Listas encadeadas - Lista de exercícios 2
+# Listas encadeadas - Lista de exercícios 2
 
 ### QUESTÃO 1 - Problema "negativos"
 
